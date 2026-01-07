@@ -1,0 +1,42 @@
+{
+  "uri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6",
+  "components": [
+    {
+      "uri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/frontend-service-cloud-run",
+      "sharedTemplateRevisionUri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space-dest-1/sharedTemplates/test-space-cloud-run-template-1-32eekt/revisions/cloud-run-template-revision-1",
+      "connections": [
+        {
+          "uri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/frontend-service-cloud-run/connections/frontend-backend-conn",
+          "destinationComponentUri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/backend-service-cloud-run"
+        }
+      ]
+    },
+    {
+      "uri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/backend-service-cloud-run",
+      "sharedTemplateRevisionUri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space-dest-1/sharedTemplates/test-space-cloud-run-template-1-32eekt/revisions/cloud-run-template-revision-1",
+      "connections": [
+        {
+          "uri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/backend-service-cloud-run/connections/backend-postgresql-conn",
+          "destinationComponentUri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/database-postgresql"
+        },
+        {
+          "uri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/backend-service-cloud-run/connections/backend-redis-conn",
+          "destinationComponentUri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/memorystore"
+        }
+      ]
+    },
+    {
+      "uri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/database-postgresql",
+      "sharedTemplateRevisionUri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space-dest-1/sharedTemplates/test-space-cloud-sql-template-1-br0upk/revisions/cloud-sql-revision-1",
+      "connections": []
+    },
+    {
+      "uri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space/applicationTemplates/app-template-6/components/memorystore",
+      "sharedTemplateRevisionUri": "projects/cloud-appcenter-e2e-testing/locations/us-central1/spaces/test-space-dest-1/sharedTemplates/test-space-memorystore-template-1-1hefgit/revisions/memorystore-revision-1",
+      "connections": []
+    }
+  ],
+  "iacFormat": "TERRAFORM",
+  "hasGlobalResource": false
+}
+
